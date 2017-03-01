@@ -1,0 +1,168 @@
+body {
+  background-color: #fff;
+}
+
+.coffee {
+  height: 63px;
+  width: 75px;
+  margin: 0 auto;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.tasse {
+  background-color: transparent;
+  border: 2px solid #141414;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 2.2rem 2.2rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.tasse .griff {
+  position: absolute;
+  height: 30%;
+  width: 19%;
+  background: transparent;
+  border-radius: 100%;
+  left: 100%;
+  top: 15%;
+  z-index: -1;
+  border: 2px solid;
+}
+
+.tasse .fillin {
+  background-color: #141414;
+  height: 100%;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 0 0 2rem 2rem;
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  bottom: 0px;
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+  z-index: -1;
+}
+
+.tasse .fillin:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color:#EEEDEA;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+}
+
+.tasse:hover .fillin:after {
+  height: 0;
+}
+
+
+.tasse .smoke span {
+  width: 2px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: -30px;
+  opacity: 0.3;
+}
+
+.tasse .smoke span {
+  width: 2px;
+  height: 25px;
+  background-color: #000;
+  position: absolute;
+  top: -30px;
+  left: 15%;
+  opacity: 0;
+  -webkit-animation-name: fader;
+  animation-name: fader;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fader {
+  0% {
+    top: -30px;
+    opacity: 0
+  }
+  50% {
+    opacity: 0.2
+  }
+  100% {
+    top: -48px;
+    opacity: 0
+  }
+}
+
+@keyframes fader {
+  0% {
+    top: -30px;
+    opacity: 0
+  }
+  50% {
+    opacity: 0.2
+  }
+  100% {
+    top: -48px;
+    opacity: 0
+  }
+}
+
+.tasse .smoke span:nth-child(2) {
+  left: 50%;
+  height: 20px;
+  -webkit-animation-duration: 2.9s;
+  animation-duration: 2.9s;
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+
+.tasse .smoke span:nth-child(3) {
+  left: 85%;
+  height: 28px;
+  -webkit-animation-duration: 2.8s;
+  animation-duration: 2.8s;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+
+#espresso, #cappuchino, #macchiato, #mocha, #americano, #latte, #breve, #raf, #glasse  {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #141414;
+  text-align: center;
+  width: 250px;
+  height: 200px;
+  cursor: pointer;
+  background-color: #EEEDEA;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#espresso p, #cappuchino p, #macchiato p, #mocha p, #americano p, #latte p, #breve p, #raf p, #glasse p {
+    color: #141414;
+    margin-top: 20px;
+}
